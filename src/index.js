@@ -1,6 +1,5 @@
 import './style.css';
-
-const { addUserInput, populateList } = require('./modules/interactivity.js');
+import { addUserInput, populateList } from './modules/interactivity.js';
 
 const userScoresList = JSON.parse(localStorage.getItem('userScoresList')) || [];
 const submit = document.querySelector('form button');
