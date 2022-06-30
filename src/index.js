@@ -1,14 +1,24 @@
 import _ from 'lodash';
 import './style.css';
 
-function component() {
-	const element = document.createElement('div');
-
-	// Lodash, now imported by this script
-	element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-	element.classList.add('hello');
-
-	return element;
+class UserScore {
+  constructor(username, score) {
+    this.username = username;
+    this.score = score;
+  }
 }
 
-document.body.appendChild(component());
+let userScoresList = JSON.parse(localStorage.getItem('userScoresList')) || [];
+const submit = document.querySelector('form button');
+const usernameInput = document.querySelector('#username');
+const scoreInput = document.querySelector('#score');
+
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  let newUserScore = new UserScore(usernameInput.value, scoreInput.value);
+  usernameInput.value = '';
+  scoreInput.value = '';
+  userScoresList.push(newUserScore);
+  localStorage.setItem('userScoresList', JSON.stringify(userScoresList));
+  console.log(userScoresList);
+});
