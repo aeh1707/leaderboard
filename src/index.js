@@ -10,8 +10,10 @@ class UserScore {
 
 let userScoresList = JSON.parse(localStorage.getItem('userScoresList')) || [];
 const submit = document.querySelector('form button');
+const refresh = document.querySelector('header button');
 const usernameInput = document.querySelector('#username');
 const scoreInput = document.querySelector('#score');
+const scoresList = document.querySelector('ul');
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
@@ -20,5 +22,11 @@ submit.addEventListener('click', (e) => {
   scoreInput.value = '';
   userScoresList.push(newUserScore);
   localStorage.setItem('userScoresList', JSON.stringify(userScoresList));
-  console.log(userScoresList);
+});
+
+refresh.addEventListener('click', (e) => {
+  scoresList.innerHTML = ''
+  for (let i = 0; i < userScoresList.length; i += 1) {
+    scoresList.innerHTML += `<li>${userScoresList[i].username}: ${userScoresList[i].score}:</li>`;
+  }
 });
