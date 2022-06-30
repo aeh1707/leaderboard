@@ -1,56 +1,43 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# LEADERBOARD WEB APP
 
-> Description the project.
-
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+> The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
+**Clone the repo into your local machine.**
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
-### Setup
+NPM should be installed
 
 ### Install
+run `npm install` in the project folder.
 
 ### Usage
-
-### Run tests
-
-### Deployment
+run `npm run start`.
 
 
+## Built With
 
-## Authors
+- HTML
+- CSS
+- JavaScript
+- Webpack
 
-👤 **Author1**
+## Live Demo
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+[Live Demo Link]()
 
-👤 **Author2**
+## Author
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Author**
+
+- GitHub: [@aeh1707](https://github.com/githubhandle)
+- Twitter: [@aeh1707](https://twitter.com/twitterhandle)
+- LinkedIn: [abdelhadi-hireche](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
