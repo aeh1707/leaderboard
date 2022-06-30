@@ -1,14 +1,20 @@
-import _ from 'lodash';
 import './style.css';
 
-function component() {
-	const element = document.createElement('div');
+const { addUserInput, populateList } = require('./modules/interactivity.js');
 
-	// Lodash, now imported by this script
-	element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-	element.classList.add('hello');
+const userScoresList = JSON.parse(localStorage.getItem('userScoresList')) || [];
+const submit = document.querySelector('form button');
+const refresh = document.querySelector('header button');
+const usernameInput = document.querySelector('#username');
+const scoreInput = document.querySelector('#score');
+const scoresList = document.querySelector('ul');
 
-	return element;
-}
+submit.addEventListener('click', (e) => {
+  addUserInput(e, usernameInput, scoreInput, userScoresList);
+  localStorage.setItem('userScoresList', JSON.stringify(userScoresList));
+});
 
-document.body.appendChild(component());
+refresh.addEventListener('click', () => {
+  scoresList.innerHTML = '';
+  populateList(scoresList, userScoresList);
+});
