@@ -1,0 +1,88 @@
+/* Global styles
+******************************/
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin: 10px;
+}
+
+button {
+  width: 70px;
+  height: 30px;
+  border: 2px solid black;
+  box-shadow: 5px 4px 1px 1px #000;
+  background-color: white;
+}
+
+article {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Board styles
+******************************/
+
+.scores-list {
+  width: 30vw;
+}
+
+.scores-list header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  border: 3px solid black;
+}
+
+li {
+  padding: 4px;
+}
+
+li:nth-child(even) {
+  background-color: gainsboro;
+}
+
+/* Form styles
+******************************/
+
+.score-form {
+  width: 25vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 8px 5px;
+  border: 3px solid black;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input::placeholder {
+  font-family: inherit;
+}
+
+form button {
+  margin: 8px;
+  align-self: end;
+}
