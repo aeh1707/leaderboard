@@ -19,6 +19,6 @@ const populateList = (scoresList, userScoresList) => {
   }
 };
 
-module.exports = {
+export {
   addUserInput, populateList,
 };
