@@ -39,7 +39,7 @@ const refreshScoreList = async (token, scoresList) => {
   const userScorsArray = await response.json();
   const arr = await userScorsArray.result;
   for (let i = 0; i < arr.length; i += 1) {
-    scoresList.innerHTML += `<li>${arr[i].username}: ${arr[i].score}</li>`;
+    scoresList.innerHTML += `<li>${arr[i].user}: ${arr[i].score}</li>`;
   }
 };
 
