@@ -1,7 +1,8 @@
 import './style.css';
-import { addUserInput, populateList } from './modules/interactivity.js';
+import { createGame, submitScore, refreshScoreList } from './modules/interactivity.js';
 
-const userScoresList = JSON.parse(localStorage.getItem('userScoresList')) || [];
+const tokenID = createGame();
+
 const submit = document.querySelector('form button');
 const refresh = document.querySelector('header button');
 const usernameInput = document.querySelector('#username');
@@ -9,11 +10,14 @@ const scoreInput = document.querySelector('#score');
 const scoresList = document.querySelector('ul');
 
 submit.addEventListener('click', (e) => {
-  addUserInput(e, usernameInput, scoreInput, userScoresList);
-  localStorage.setItem('userScoresList', JSON.stringify(userScoresList));
+  e.preventDefault();
+  submitScore(tokenID, usernameInput.value, scoreInput.value);
+  usernameInput.value = '';
+  scoreInput.value = '';
 });
 
-refresh.addEventListener('click', () => {
+refresh.addEventListener('click', (e) => {
+  e.preventDefault();
   scoresList.innerHTML = '';
-  populateList(scoresList, userScoresList);
+  refreshScoreList(tokenID, scoresList);
 });
